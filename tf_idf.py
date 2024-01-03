@@ -11,12 +11,9 @@ def getScores(docsFound, totalTerms):
         tf_idf_scores.append({})
         for docContaining in docsContaining: # docID
             tf = docsContaining[docContaining] / totalTerms[docContaining]
-            print(tf, end=":")
             numDocsTotal = 399
             df = len(docsContaining)
-            print(df, end=":")
             idf = math.log(numDocsTotal / df)
-            print(idf)
             tf_idf = tf * idf
             tf_idf_scores[len(tf_idf_scores) - 1].update({docContaining : tf_idf})
     

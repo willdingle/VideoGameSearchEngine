@@ -1,9 +1,16 @@
-1. Bigrams - nltk.bigrams
-2. Lemmatisation - from nltk.stem import WordNetLemmatizer
-3. Spelling correction(?)
-4. Tolerant retrieval - spelling correction(?)
-5. Term weighting - tf-idf ranking
-6. Document similarity - cosine
-7. Relevance feedback
-8. Query expansion
-9. Named entities - Chunking
+THE USE OF REMOVING STOP WORDS IS CURRENTLY IN USE - NEED TO TEST WITH AND WITHOUT
+
+Pre-processing:
+- Stop words
+- Stemming
+- Lemmatisation - from nltk.stem import WordNetLemmatizer
+
+Others to definitely include:
+- Extra weight to terms including titles, headings, etc
+- Query expansion: spelling correction, thesaurus
+- Named entities - Chunking
+
+Maybe:
+- Document similarity - cosine
+- Query expansion: Relevance feedback
+- Wildcard queries: k-gram indexes
