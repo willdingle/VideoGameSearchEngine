@@ -1,7 +1,7 @@
 THE USE OF REMOVING STOP WORDS IS CURRENTLY IN USE - NEED TO TEST WITH AND WITHOUT
 
 Pre-processing:
-- Stop words
+- Stop words - from nltk.corpus import stopwords
 - Stemming
 - Lemmatisation - from nltk.stem import WordNetLemmatizer
 
