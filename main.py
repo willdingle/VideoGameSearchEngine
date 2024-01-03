@@ -4,7 +4,8 @@ from nltk.corpus import stopwords
 import regex as re
 from bs4 import BeautifulSoup
 import pickle
-import math
+
+import tf_idf
 
 def init():
     global vocabIndex
@@ -95,7 +96,7 @@ def processQuery(query):
     query = re.sub(r"[^A-Za-z ]-+", "", query)
     # Splits search query into terms and gets doc IDs of docs containing each term
     queryTerms = query.split(" ")
-    docsFound = []
+    docsFound = [] # [{docID : rawTermFreq}, {docID : rawTermFreq}, ...]
     for term in queryTerms:
         getIDsResult = getDocIDs(term)
         if (getIDsResult):
@@ -105,38 +106,24 @@ def processQuery(query):
         print("NO RESULTS")
         return
     
-    # numDocsTotal = no of docs in total
-        # df = document frequency (no of docs term has occured in)
-        # term freq in curr doc * log(numDocsTotal / df) = score
-    for docsContaining in docsFound:
-        for docContaining in docsContaining:
-            tf = docsContaining[docContaining]
-            print(tf, end=":")
-            numDocsTotal = 399
-            df = len(docsContaining)
-            print(df, end=":")
-            idf = math.log(numDocsTotal / df)
-            print(idf, end=":")
-            tf_idf = tf * idf
-            print(tf_idf)
-            docsContaining[docContaining] = tf_idf
+    tf_idf_scores = tf_idf.getScores(docsFound, totalTerms) # [{docID : tf_idf, ...}, ...]
 
     # Finds and prints docs where all terms are found
     docsContainingAll = {}
-    if len(docsFound) == 2:
-        for docID in docsFound[0]:
-            if docID in docsFound[1]:
-                docsContainingAll.update({docID : docsFound[0][docID] + docsFound[1][docID]})
-    elif len(docsFound) > 2:
-        for docID in docsFound[0]:
-            if docID in docsFound[1]:
-                docsContainingAll.update({docID : docsFound[0][docID] + docsFound[1][docID]})
-        for i in range(2, len(docsFound)):
-            for docID in docsFound[i]:
+    if len(tf_idf_scores) == 2:
+        for docID in tf_idf_scores[0]:
+            if docID in tf_idf_scores[1]:
+                docsContainingAll.update({docID : tf_idf_scores[0][docID] + tf_idf_scores[1][docID]})
+    elif len(tf_idf_scores) > 2:
+        for docID in tf_idf_scores[0]:
+            if docID in tf_idf_scores[1]:
+                docsContainingAll.update({docID : tf_idf_scores[0][docID] + tf_idf_scores[1][docID]})
+        for i in range(2, len(tf_idf_scores)):
+            for docID in tf_idf_scores[i]:
                 if docID in docsContainingAll:
-                    docsContainingAll.update({docID : docsFound[i][docID] + docsContainingAll[docID]})
+                    docsContainingAll.update({docID : tf_idf_scores[i][docID] + docsContainingAll[docID]})
     else:
-        docsContainingAll = docsFound[0]
+        docsContainingAll = tf_idf_scores[0]
 
     docsContainingAllTemp = sorted(docsContainingAll.items(), key=lambda x:x[1], reverse=True)
     docsContainingAll = dict(docsContainingAllTemp)
@@ -158,4 +145,3 @@ while True:
     query = input("Search (0 to quit): ")
     if query == "0": break
     processQuery(query)
-    print(totalTerms)
