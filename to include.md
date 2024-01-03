@@ -1,5 +1,3 @@
-THE USE OF REMOVING STOP WORDS IS CURRENTLY IN USE - NEED TO TEST WITH AND WITHOUT
-
 Pre-processing:
 - Stop words - from nltk.corpus import stopwords
 - Stemming
