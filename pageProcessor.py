@@ -7,12 +7,12 @@ def processPage(page):
     # Parse html using beautifulsoup
     soup = BeautifulSoup(page, "html.parser")
     # Find all div elements
-    paras = soup.find_all("div")
+    divs = soup.find_all("div")
     cleanedTokens = {}
     # Go through each paragraph and remove punctuation, convert to lowercase and remove stopwords
-    for p in paras:
-        cleanedParas = p.get_text()
-        reText = re.sub(r"[^A-Za-z0-9- ]+", "", str(cleanedParas))
+    for div in divs:
+        cleanedDivs = div.get_text()
+        reText = re.sub(r"[^A-Za-z0-9- ]+", "", str(cleanedDivs))
         words = word_tokenize(reText)
         for word in words:
             word = word.lower()
