@@ -49,14 +49,22 @@ def processQuery(query, vocab, postings, docIDs, totalTerms):
     else:
         docsContainingAll = tf_idf_scores[0]
 
-    # Display results
+    # Sort results by descending tf-idf score
     docsContainingAllTemp = sorted(docsContainingAll.items(), key=lambda x:x[1], reverse=True)
     docsContainingAll = dict(docsContainingAllTemp)
+
+    #Display results and save them to a file
+    file = open("results.txt", "a")
     print("----- " + queryRaw + " -----")
+    file.write("----- " + queryRaw + " -----\n")
     resultsDisp = 0
     for docID in docsContainingAll:
         if docsContainingAll[docID] == 0: break
         resultsDisp += 1
-        print(str(resultsDisp) + ".", docIDs[docID], "\t", docsContainingAll[docID])
+        currentResult = str(resultsDisp) + ". " + docIDs[docID] + "\t" + str(docsContainingAll[docID])
+        print(currentResult)
+        file.write(currentResult + "\n")
         if resultsDisp == 10: break
     print("")
+    file.write("\n")
+    file.close()
