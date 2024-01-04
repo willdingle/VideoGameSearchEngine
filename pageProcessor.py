@@ -12,7 +12,7 @@ def processPage(page):
     # Go through each paragraph and remove punctuation, convert to lowercase and remove stopwords
     for p in paras:
         cleanedParas = p.get_text()
-        reText = re.sub(r"[^A-Za-z ]-+", "", str(cleanedParas))
+        reText = re.sub(r"[^A-Za-z0-9- ]+", "", str(cleanedParas))
         words = word_tokenize(reText)
         for word in words:
             word = word.lower()

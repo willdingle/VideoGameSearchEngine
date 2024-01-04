@@ -10,8 +10,9 @@ def getDocIDs(term, vocab, postings):
     return False
 
 def processQuery(query, vocab, postings, docIDs, totalTerms):
+    queryRaw = query
     query = query.lower()
-    query = re.sub(r"[^A-Za-z ]-+", "", query)
+    query = re.sub(r"[^A-Za-z0-9- ]+", "", query)
     # Splits search query into terms and gets doc IDs of docs containing each term
     queryTerms = query.split(" ")
     docsFound = [] # [{docID : rawTermFreq}, {docID : rawTermFreq}, ...]
@@ -20,8 +21,9 @@ def processQuery(query, vocab, postings, docIDs, totalTerms):
         if (getIDsResult):
             docsFound.append(getIDsResult)
     if len(docsFound) == 0:
-        print("----- " + query + " -----")
+        print("----- " + queryRaw + " -----")
         print("NO RESULTS")
+        print("")
         return
     
     tf_idf_scores = tf_idf.getScores(docsFound, totalTerms) # [{docID : tf_idf, ...}, ...]
@@ -50,10 +52,11 @@ def processQuery(query, vocab, postings, docIDs, totalTerms):
     # Display results
     docsContainingAllTemp = sorted(docsContainingAll.items(), key=lambda x:x[1], reverse=True)
     docsContainingAll = dict(docsContainingAllTemp)
-    print("----- " + query + " -----")
+    print("----- " + queryRaw + " -----")
     resultsDisp = 0
     for docID in docsContainingAll:
         if docsContainingAll[docID] == 0: break
         resultsDisp += 1
         print(str(resultsDisp) + ".", docIDs[docID], "\t", docsContainingAll[docID])
         if resultsDisp == 10: break
+    print("")
