@@ -1,9 +1,12 @@
 from bs4 import BeautifulSoup
 from nltk.tokenize import word_tokenize
 import regex as re
+from nltk.corpus import stopwords
 
 # Process contents of html file and return the tokens
 def processPage(page):
+    stops = set(stopwords.words("english"))
+
     # Parse html using beautifulsoup
     soup = BeautifulSoup(page, "html.parser")
     # Find all div elements
@@ -16,8 +19,9 @@ def processPage(page):
         words = word_tokenize(reText)
         for word in words:
             word = word.lower()
-            if word not in cleanedTokens:
-                cleanedTokens.update( {word : 1} )
-            else:
-                cleanedTokens[word] += 1
+            if word not in stops:
+                if word not in cleanedTokens:
+                    cleanedTokens.update( {word : 1} )
+                else:
+                    cleanedTokens[word] += 1
     return cleanedTokens

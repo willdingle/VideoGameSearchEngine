@@ -27,8 +27,10 @@
 6. final-fight-streetwise.html	0.01321258584259657
 7. mortal-kombat-deception.html	0.010184008231321285
 
------ Spyder-Man -----
-NO RESULTS
+----- Spider-Man -----
+1. spider-man-trilogy.html	0.2840866713489816
+2. spider-man-3.html	0.24641294056931318
+3. untitled-marvel-comics-rpg.html	0.030660496101703783
 
 ----- star-wars-battlefront -----
 1. star-wars-battlefront.html	0.013611275947476962

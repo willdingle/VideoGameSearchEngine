@@ -1,4 +1,5 @@
 import regex as re
+from nltk.corpus import stopwords
 
 import tf_idf
 
@@ -10,6 +11,8 @@ def getDocIDs(term, vocab, postings):
     return False
 
 def processQuery(query, vocab, postings, docIDs, totalTerms):
+    stops = set(stopwords.words("english"))
+
     queryRaw = query
     query = query.lower()
     query = re.sub(r"[^A-Za-z0-9- ]+", "", query)
@@ -17,9 +20,10 @@ def processQuery(query, vocab, postings, docIDs, totalTerms):
     queryTerms = query.split(" ")
     docsFound = [] # [{docID : rawTermFreq}, {docID : rawTermFreq}, ...]
     for term in queryTerms:
-        getIDsResult = getDocIDs(term, vocab, postings)
-        if (getIDsResult):
-            docsFound.append(getIDsResult)
+        if term not in stops:
+            getIDsResult = getDocIDs(term, vocab, postings)
+            if (getIDsResult):
+                docsFound.append(getIDsResult)
     if len(docsFound) == 0:
         print("----- " + queryRaw + " -----")
         print("NO RESULTS")
@@ -54,7 +58,7 @@ def processQuery(query, vocab, postings, docIDs, totalTerms):
     docsContainingAllTemp = sorted(docsContainingAll.items(), key=lambda x:x[1], reverse=True)
     docsContainingAll = dict(docsContainingAllTemp)
 
-    #Display results and save them to a file
+    # Display results and save them to a file
     file = open("results.txt", "a")
     print("----- " + queryRaw + " -----")
     file.write("----- " + queryRaw + " -----\n")
