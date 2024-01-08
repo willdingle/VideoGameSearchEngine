@@ -9,7 +9,7 @@ def processPage(page):
     # Find all div elements
     divs = soup.find_all("div")
     cleanedTokens = {}
-    # Go through each paragraph and remove punctuation, convert to lowercase and remove stopwords
+    # Go through each paragraph and remove punctuation, convert to lowercase
     for div in divs:
         cleanedDivs = div.get_text()
         reText = re.sub(r"[^A-Za-z0-9- ]+", "", str(cleanedDivs))

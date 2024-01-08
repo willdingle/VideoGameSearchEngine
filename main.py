@@ -39,6 +39,7 @@ def init():
             docIDs.update({docIDsIndex : fileName})
 
             fileTokens = pageProcessor.processPage(fileContents)
+            fileTokens.update({fileName.split(".", 1)[0] : 1})
             totalTerms.update({docIDsIndex : len(fileTokens)})
             for token in fileTokens:
                 if token not in vocab:
@@ -75,5 +76,6 @@ totalTerms = {} # {docID : numOfTerms}
 init()
 while True:
     query = input("Search (0 to quit): ")
+    print()
     if query == "0": break
     queryHandler.processQuery(query, vocab, postings, docIDs, totalTerms)

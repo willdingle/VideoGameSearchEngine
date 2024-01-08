@@ -24,6 +24,9 @@ def processQuery(query, vocab, postings, docIDs, totalTerms):
         print("----- " + queryRaw + " -----")
         print("NO RESULTS")
         print("")
+        file = open("results.txt", "a")
+        file.write("----- " + queryRaw + " -----\n")
+        file.write("NO RESULTS\n\n")
         return
     
     tf_idf_scores = tf_idf.getScores(docsFound, totalTerms) # [{docID : tf_idf, ...}, ...]
@@ -34,18 +37,16 @@ def processQuery(query, vocab, postings, docIDs, totalTerms):
         for docID in tf_idf_scores[0]:
             if docID in tf_idf_scores[1]:
                 docsContainingAll.update({docID : tf_idf_scores[0][docID] + tf_idf_scores[1][docID]})
-            else:
-                docsContainingAll.update({docID : tf_idf_scores[0][docID]})
+
     elif len(tf_idf_scores) > 2:
         for docID in tf_idf_scores[0]:
             if docID in tf_idf_scores[1]:
                 docsContainingAll.update({docID : tf_idf_scores[0][docID] + tf_idf_scores[1][docID]})
-            else:
-                docsContainingAll.update({docID : tf_idf_scores[0][docID]})
         for i in range(2, len(tf_idf_scores)):
             for docID in tf_idf_scores[i]:
                 if docID in docsContainingAll:
                     docsContainingAll.update({docID : tf_idf_scores[i][docID] + docsContainingAll[docID]})
+                    
     else:
         docsContainingAll = tf_idf_scores[0]
 

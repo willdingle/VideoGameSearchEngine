@@ -1,0 +1,58 @@
+----- Action-Adventure Games -----
+1. x2-wolverines-revenge.html	0.017131917489850417
+2. genji.html	0.015287856926706794
+3. eragon.html	0.015150775532989776
+4. project-j-sega.html	0.01326175540629987
+5. phantasy-star-universe.html	0.01247710926246217
+6. god-of-war.html	0.011276779763794922
+
+----- RPG Games for PlayStation -----
+1. shadow-hearts-ii.html	0.05529502154713546
+2. level-5-new-rpg-untitled.html	0.04178335938622987
+3. wild-arms-3.html	0.04141857133473702
+4. dragon-warrior-viii.html	0.036571102673654085
+5. wild-arms-another-code-f.html	0.035628239758976915
+6. phantom-brave.html	0.03374715443876572
+7. hackinfection-part-1.html	0.02918327755333296
+8. project-melfes.html	0.02829072287391869
+9. phantasy-star-universe.html	0.027814174003683568
+10. shadow-hearts-3.html	0.027268492973126775
+
+----- The Guy Game -----
+1. family-guy.html	0.4620630020382343
+2. the-guy-game.html	0.4113981991831647
+3. james-bond-007-goldeneye-2.html	0.030322884508759126
+4. evil-dead-regeneration.html	0.013941556095981208
+5. dragon-ball-z-sparking.html	0.013387586979584604
+6. final-fight-streetwise.html	0.01321258584259657
+7. mortal-kombat-deception.html	0.010184008231321285
+
+----- Spyder-Man -----
+NO RESULTS
+
+----- star-wars-battlefront -----
+1. star-wars-battlefront.html	0.013611275947476962
+
+----- Iron Man -----
+1. iron-man-2008.html	0.4261325847225237
+2. guitar-hero.html	0.025107800854969647
+
+----- James Earl Cash -----
+1. manhunt.html	0.12097490563786786
+
+----- Crazy Taxi -----
+1. crazy-taxi.html	0.7030200120965562
+2. the-king-of-route-66.html	0.035134863021144824
+
+----- James Bond -----
+1. james-bond-007-nightfire.html	0.6296300556730761
+2. james-bond-007-goldeneye-2.html	0.13036803036770714
+
+----- The Lord of the Rings: The Two Towers (PS2) -----
+1. the-lord-of-the-rings-the-two-towers.html	1.1864920287768865
+2. phantom-kingdom.html	0.029662204577115252
+3. snk-arcade-classics-volume-1.html	0.017635302301100036
+4. odin-sphere.html	0.015838497915704935
+5. castlevania-lament-of-innocence.html	0.014778880097400734
+6. harry-potter-and-the-goblet-of-fire.html	0.012491672463279192
+
