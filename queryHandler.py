@@ -58,18 +58,21 @@ def processQuery(query, vocab, postings, docIDs, totalTerms):
     docsContainingAllTemp = sorted(docsContainingAll.items(), key=lambda x:x[1], reverse=True)
     docsContainingAll = dict(docsContainingAllTemp)
 
-    # Display results and save them to a file
+    # Display results and save them (and the average of the tf-idf scores) to a file
     file = open("results.txt", "a")
     print("----- " + queryRaw + " -----")
     file.write("----- " + queryRaw + " -----\n")
     resultsDisp = 0
+    sumTfIdf = 0
     for docID in docsContainingAll:
         if docsContainingAll[docID] == 0: break
         resultsDisp += 1
+        sumTfIdf += docsContainingAll[docID]
         currentResult = str(resultsDisp) + ". " + docIDs[docID] + "\t" + str(docsContainingAll[docID])
         print(currentResult)
         file.write(currentResult + "\n")
         if resultsDisp == 10: break
+    avgTfIdf = sumTfIdf / resultsDisp
     print("")
-    file.write("\n")
+    file.write("Average tf-idf: " + str(avgTfIdf) + "\n\n")
     file.close()
