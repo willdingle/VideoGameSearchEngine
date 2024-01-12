@@ -7,6 +7,7 @@ from nltk import PorterStemmer
 # Process contents of html file and return the tokens
 def processPage(page):
     stops = set(stopwords.words("english"))
+    stemmer = PorterStemmer()
 
     # Parse html using beautifulsoup
     soup = BeautifulSoup(page, "html.parser")
@@ -21,6 +22,7 @@ def processPage(page):
         for word in words:
             word = word.lower()
             if word not in stops:
+                word = stemmer.stem(word)
                 if word not in cleanedTokens:
                     cleanedTokens.update( {word : 1} )
                 else:
