@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 from nltk.tokenize import word_tokenize
 import regex as re
 from nltk.corpus import stopwords
+from nltk import PorterStemmer
 
 # Process contents of html file and return the tokens
 def processPage(page):
@@ -25,3 +26,20 @@ def processPage(page):
                 else:
                     cleanedTokens[word] += 1
     return cleanedTokens
+
+# Get information about the page from the videogame-labels.csv file
+def getPageInfo(fileName):
+    file = open("videogame-labels.csv", "r")
+    contents = file.read()
+    file.close()
+
+    lines = contents.split("\n")
+    for line in lines:
+        info = line.split(",")
+        if info[0] == "url": continue
+
+        url = info[0].split("/")[2] #url = name of the page (e.g. game.html)
+        if url == fileName:
+            return [info[1], info[2], info[3], info[4]] #[rating, publisher, genre, developer]
+        
+    raise Exception("File not found in details csv")

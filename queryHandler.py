@@ -10,7 +10,7 @@ def getDocIDs(term, vocab, postings):
         return docsContaining
     return False
 
-def processQuery(query, vocab, postings, docIDs, totalTerms):
+def processQuery(query, vocab, postings, docIDs, totalTerms, docInfo):
     stops = set(stopwords.words("english"))
 
     queryRaw = query
@@ -61,14 +61,16 @@ def processQuery(query, vocab, postings, docIDs, totalTerms):
     # Display results and save them (and the average of the tf-idf scores) to a file
     file = open("results.txt", "a")
     print("----- " + queryRaw + " -----")
+    print("RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER")
     file.write("----- " + queryRaw + " -----\n")
+    file.write("RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER\n")
     resultsDisp = 0
     sumTfIdf = 0
     for docID in docsContainingAll:
         if docsContainingAll[docID] == 0: break
         resultsDisp += 1
         sumTfIdf += docsContainingAll[docID]
-        currentResult = str(resultsDisp) + ". " + docIDs[docID] + "\t" + str(docsContainingAll[docID])
+        currentResult = str(resultsDisp) + ". " + str(docIDs[docID]) + " | " + str(docInfo[docID][0]) + " | " + str(docInfo[docID][1]) + " | " + str(docInfo[docID][2]) + " | " + str(docInfo[docID][3]) + " | " + str(docsContainingAll[docID])
         print(currentResult)
         file.write(currentResult + "\n")
         if resultsDisp == 10: break

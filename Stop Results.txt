@@ -1,65 +1,75 @@
 ----- Action-Adventure Games -----
-1. x2-wolverines-revenge.html	0.019310977170577004
-2. genji.html	0.017065514708882002
-3. eragon.html	0.01700125193396563
-4. project-j-sega.html	0.014774841593595829
-5. phantasy-star-universe.html	0.013705624635996906
-6. god-of-war.html	0.012654340928122142
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. x2-wolverines-revenge.html | Teen | Activision | Action | GenePool Software | 0.019310977170577004
+2. genji.html | Mature | Sony Computer Entertainment | Action | Game Republic (JP) | 0.017065514708882002
+3. eragon.html | Teen | Vivendi Games | Adventure | Stormfront Studios | 0.01700125193396563
+4. project-j-sega.html | Mature | SEGA | "Action |  Adventure" | 0.014774841593595829
+5. phantasy-star-universe.html | Teen | SEGA | RPG | Sonic Team | 0.013705624635996906
+6. god-of-war.html | Mature | Sony Computer Entertainment | "Action |  Adventure" | 0.012654340928122142
 Average tf-idf: 0.01575209182852325
 
 ----- RPG Games for PlayStation -----
-1. shadow-hearts-ii.html	0.061493609381559206
-2. level-5-new-rpg-untitled.html	0.04648664851151806
-3. wild-arms-3.html	0.044953149880882046
-4. dragon-warrior-viii.html	0.04118879450709229
-5. wild-arms-another-code-f.html	0.03901577590231041
-6. phantom-brave.html	0.038711750757590244
-7. hackinfection-part-1.html	0.0324049538649811
-8. shadow-hearts-3.html	0.03113938955974353
-9. project-melfes.html	0.03096883539410469
-10. phantasy-star-universe.html	0.030396602993145228
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. shadow-hearts-ii.html | Teen | Midway Games / Aruze | RPG | Nautilus | 0.061493609381559206
+2. level-5-new-rpg-untitled.html | Teen | Sony Computer Entertainment | RPG | Level-5 | 0.04648664851151806
+3. wild-arms-3.html | Teen | Sony Computer Entertainment | RPG | Media.Vision | 0.044953149880882046
+4. dragon-warrior-viii.html | Teen | Square Enix | RPG | Level-5 | 0.04118879450709229
+5. wild-arms-another-code-f.html | Teen | XSEED Games | RPG | Media.Vision | 0.03901577590231041
+6. phantom-brave.html | Teen | NIS | "Strategy |  RPG" | 0.038711750757590244
+7. hackinfection-part-1.html | Teen | Bandai | "Action |  RPG" | 0.0324049538649811
+8. shadow-hearts-3.html | Teen | Aruze | RPG | Nautilus | 0.03113938955974353
+9. project-melfes.html | Teen | Namco | RPG | Namco | 0.03096883539410469
+10. phantasy-star-universe.html | Teen | SEGA | RPG | Sonic Team | 0.030396602993145228
 Average tf-idf: 0.03967595107529268
 
 ----- The Guy Game -----
-1. family-guy.html	0.5280720023294107
-2. the-guy-game.html	0.4671254452876572
-3. james-bond-007-goldeneye-2.html	0.03485389023995302
-4. evil-dead-regeneration.html	0.016107773975436456
-5. final-fight-streetwise.html	0.015199440856520864
-6. dragon-ball-z-sparking.html	0.015199440856520864
-7. mortal-kombat-deception.html	0.011421048779193645
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. family-guy.html | Mature | 2K Games | "Action |  Adventure" | 0.5280720023294107
+2. the-guy-game.html | Mature | Gathering | Trivia | Atomic Planet | 0.4671254452876572
+3. james-bond-007-goldeneye-2.html | Teen | Electronic Arts | Shooter | EA Los Angeles | 0.03485389023995302
+4. evil-dead-regeneration.html | Mature | THQ | Action | Cranky Pants Games | 0.016107773975436456
+5. final-fight-streetwise.html | Mature | Capcom | "Fighting |  Action" | 0.015199440856520864
+6. dragon-ball-z-sparking.html | Teen | Atari | Fighting | Spike | 0.015199440856520864
+7. mortal-kombat-deception.html | Mature | Midway Games | Fighting | Midway Games | 0.011421048779193645
 Average tf-idf: 0.15542557747495608
 
 ----- Spider-Man -----
-1. spider-man-trilogy.html	0.3155063953691454
-2. spider-man-3.html	0.27883569590738067
-3. untitled-marvel-comics-rpg.html	0.03431823949629301
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. spider-man-trilogy.html | Everyone 10+ | Activision | Action | Next Level Games | 0.3155063953691454
+2. spider-man-3.html | Teen | Activision | "Action |  Adventure" | 0.27883569590738067
+3. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 0.03431823949629301
 Average tf-idf: 0.20955344359093966
 
 ----- star-wars-battlefront -----
-1. star-wars-battlefront.html	0.015239087574783369
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. star-wars-battlefront.html | Teen | LucasArts | Shooter | Pandemic Studios | 0.015239087574783369
 Average tf-idf: 0.015239087574783369
 
 ----- Iron Man -----
-1. iron-man-2008.html	0.4673712219537356
-2. guitar-hero.html	0.029047794219903347
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. iron-man-2008.html | Teen | SEGA | Action | A2M (Artificial Mind and Movement) | 0.4673712219537356
+2. guitar-hero.html | Teen | RedOctane | Music | Harmonix | 0.029047794219903347
 Average tf-idf: 0.24820950808681946
 
 ----- James Earl Cash -----
-1. manhunt.html	0.13679470099051214
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. manhunt.html | Mature | Rockstar Games | Action | Rockstar North | 0.13679470099051214
 Average tf-idf: 0.13679470099051214
 
 ----- Crazy Taxi -----
-1. crazy-taxi.html	0.8021241547709607
-2. the-king-of-route-66.html	0.04002319178930411
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. crazy-taxi.html | Teen | Acclaim Entertainment | "Racing |  Action" | 0.8021241547709607
+2. the-king-of-route-66.html | Teen | SEGA | Racing | SEGA-AM2 | 0.04002319178930411
 Average tf-idf: 0.4210736732801324
 
 ----- James Bond -----
-1. james-bond-007-nightfire.html	0.7164755805935004
-2. james-bond-007-goldeneye-2.html	0.14984831076747945
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. james-bond-007-nightfire.html | Teen | Electronic Arts | Shooter | Eurocom | 0.7164755805935004
+2. james-bond-007-goldeneye-2.html | Teen | Electronic Arts | Shooter | EA Los Angeles | 0.14984831076747945
 Average tf-idf: 0.43316194568048993
 
 ----- The Lord of the Rings: The Two Towers (PS2) -----
-1. the-lord-of-the-rings-the-two-towers.html	1.3399177221532081
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. the-lord-of-the-rings-the-two-towers.html | Teen | Electronic Arts | Action | Stormfront Studios | 1.3399177221532081
 Average tf-idf: 1.3399177221532081
 
