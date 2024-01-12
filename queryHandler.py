@@ -1,6 +1,6 @@
 import regex as re
 from nltk.corpus import stopwords
-from nltk import PorterStemmer
+from nltk.stem import WordNetLemmatizer
 
 import tf_idf
 
@@ -13,7 +13,7 @@ def getDocIDs(term, vocab, postings):
 
 def processQuery(query, vocab, postings, docIDs, totalTerms, docInfo):
     stops = set(stopwords.words("english"))
-    stemmer = PorterStemmer()
+    lemmer = WordNetLemmatizer()
 
     queryRaw = query
     query = query.lower()
@@ -23,7 +23,7 @@ def processQuery(query, vocab, postings, docIDs, totalTerms, docInfo):
     docsFound = [] # [{docID : rawTermFreq}, {docID : rawTermFreq}, ...]
     for term in queryTerms:
         if term not in stops:
-            term = stemmer.stem(term) #Stem term
+            term = lemmer.lemmatize(term) #Lemmatise term
             getIDsResult = getDocIDs(term, vocab, postings)
             if (getIDsResult):
                 docsFound.append(getIDsResult)

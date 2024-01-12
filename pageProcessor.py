@@ -2,12 +2,12 @@ from bs4 import BeautifulSoup
 from nltk.tokenize import word_tokenize
 import regex as re
 from nltk.corpus import stopwords
-from nltk import PorterStemmer
+from nltk.stem import WordNetLemmatizer
 
 # Process contents of html file and return the tokens
 def processPage(page):
     stops = set(stopwords.words("english"))
-    stemmer = PorterStemmer()
+    lemmer = WordNetLemmatizer()
 
     # Parse html using beautifulsoup
     soup = BeautifulSoup(page, "html.parser")
@@ -22,7 +22,7 @@ def processPage(page):
         for word in words:
             word = word.lower()
             if word not in stops:
-                word = stemmer.stem(word)
+                word = lemmer.lemmatize(word)
                 if word not in cleanedTokens:
                     cleanedTokens.update( {word : 1} )
                 else:
