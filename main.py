@@ -82,7 +82,6 @@ totalTerms = {} # {docID : numOfTerms}
 init()
 while True:
     query = input("Search (0 to quit): ")
-    #print(postings[vocab["game"]])
     print()
     if query == "0": break
     queryHandler.processQuery(query, vocab, postings, docIDs, totalTerms, docInfo)
