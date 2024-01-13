@@ -76,12 +76,13 @@ def init():
 vocab = {} # {term : vocabID}
 docIDs = {} # {docID : docName}
 postings = {} # {vocabID : {docID : freq, docID: freq}}
-docInfo = {} # {docID : [rating, publisher, genre, developer]}
+docInfo = {} # {docID : [rating, publisher, genre, developer, gameName]}
 totalTerms = {} # {docID : numOfTerms}
 
 init()
 while True:
     query = input("Search (0 to quit): ")
+    #print(postings[vocab["game"]])
     print()
     if query == "0": break
     queryHandler.processQuery(query, vocab, postings, docIDs, totalTerms, docInfo)

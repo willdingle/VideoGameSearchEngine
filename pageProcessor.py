@@ -14,6 +14,7 @@ def processPage(page):
     # Find all div elements
     divs = soup.find_all("div")
     cleanedTokens = {}
+    totalFreq = 0
     # Go through each paragraph and remove punctuation, convert to lowercase
     for div in divs:
         cleanedDivs = div.get_text()
@@ -27,6 +28,21 @@ def processPage(page):
                     cleanedTokens.update( {word : 1} )
                 else:
                     cleanedTokens[word] += 1
+                totalFreq += 1
+
+    # Get the name of the game and add each token from it to the vocab with significantly higher frequencies
+    heading = soup.find("title")
+    gameName = heading.get_text()
+    gameName = gameName.split(": ")[1]
+    gameName = re.sub(r"[^A-Za-z0-9- ]+", "", str(gameName))
+    gameName = gameName.lower()
+    gameNameTokens = gameName.split(" ")
+    for token in gameNameTokens:
+        if token not in cleanedTokens:
+            cleanedTokens.update( {token : totalFreq} )
+        else:
+            cleanedTokens[token] += totalFreq
+
     return cleanedTokens
 
 # Get information about the page from the videogame-labels.csv file
