@@ -10,7 +10,8 @@ def getScores(docsFound, totalTerms):
     for docsContaining in docsFound: # {docID : rawTermFreq, docID: rawTermFreq, ...}
         tf_idf_scores.append({})
         for docContaining in docsContaining: # docID
-            tf = docsContaining[docContaining] / totalTerms[docContaining]
+            tf = docsContaining[docContaining]
+            tf = 1 + math.log(tf)
             numDocsTotal = 399
             df = len(docsContaining)
             idf = math.log(numDocsTotal / df)

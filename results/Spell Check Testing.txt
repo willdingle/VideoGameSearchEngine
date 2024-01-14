@@ -1,0 +1,45 @@
+----- Spyder-Man -----
+NO RESULTS
+
+----- Spyder -----
+NO RESULTS
+
+----- Spyder -----
+NO RESULTS
+
+----- Spyder-Man -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 5.988961416889864
+Average tf-idf: 5.988961416889864
+
+----- Spyder-MAn -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 5.988961416889864
+Average tf-idf: 5.988961416889864
+
+----- Spyder-Man -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 5.988961416889864
+Average tf-idf: 5.988961416889864
+
+----- Spyder-Man -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 5.988961416889864
+Average tf-idf: 5.988961416889864
+
+----- Spyder-Man -----
+NO RESULTS
+
+----- Spyder-Man -----
+NO RESULTS
+
+----- Spyder-Man -----
+NO RESULTS
+
+----- Spyder-Man -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. spider-man-trilogy.html | Everyone 10+ | Activision | Action | Next Level Games | 36.412169427715696
+2. spider-man-3.html | Teen | Activision | "Action |  Adventure" | 36.32602814461253
+3. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 8.28008083840245
+Average tf-idf: 27.006092803576895
+

@@ -1,6 +1,7 @@
 import regex as re
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+from spellchecker import SpellChecker
 
 import tf_idf
 
@@ -10,6 +11,17 @@ def getDocIDs(term, vocab, postings):
         docsContaining = postings[vocabID]
         return docsContaining
     return False
+
+def spellCheck(term):
+    checker = SpellChecker()
+    correctedTerm = checker.correction(term)
+    
+    if "-" in term and term != correctedTerm: 
+        dashIndex = term.index("-")
+        correctedTerm = correctedTerm[0 : dashIndex] + "-" + correctedTerm[dashIndex : len(term)]
+
+    if term != correctedTerm: print("Corrected term", term, "to", correctedTerm)
+    return correctedTerm
 
 def processQuery(query, vocab, postings, docIDs, totalTerms, docInfo):
     stops = set(stopwords.words("english"))
@@ -22,6 +34,7 @@ def processQuery(query, vocab, postings, docIDs, totalTerms, docInfo):
     queryTerms = query.split(" ")
     docsFound = [] # [{docID : rawTermFreq}, {docID : rawTermFreq}, ...]
     for term in queryTerms:
+        term = spellCheck(term)
         if term not in stops:
             term = lemmer.lemmatize(term) #Lemmatise term
             getIDsResult = getDocIDs(term, vocab, postings)
