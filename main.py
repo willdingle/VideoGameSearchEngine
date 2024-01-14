@@ -71,6 +71,16 @@ def init():
         file = open("invertedIndex/docInfo.pkl", "wb")
         pickle.dump(docInfo, file)
         file.close()
+
+def relFeedBack():
+    query = input("Enter query you would like to store relevance feedback for: ")
+    query = query.lower()
+    relevantDoc = input("Enter the exact name of the document which you are trying to find with this search: ")
+    relevantDoc = relevantDoc.lower()
+    docs = {value : key for key, value in docIDs.items()}
+    file = open("relFeedback.txt", "a")
+    file.write(query + "," + str(docs[relevantDoc]) + "\n")
+    file.close()
         
 
 vocab = {} # {term : vocabID}
@@ -81,7 +91,8 @@ totalTerms = {} # {docID : numOfTerms}
 
 init()
 while True:
-    query = input("Search (0 to quit): ")
+    query = input("Search (R for relevance feedback, 0 to quit): ")
     print()
-    if query == "0": break
-    queryHandler.processQuery(query, vocab, postings, docIDs, totalTerms, docInfo)
+    if query == "R" or query == "r": relFeedBack()
+    elif query == "0": break
+    else: queryHandler.processQuery(query, vocab, postings, docIDs, totalTerms, docInfo)

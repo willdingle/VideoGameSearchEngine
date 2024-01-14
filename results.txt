@@ -1,0 +1,66 @@
+----- The Guy Game -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. the-guy-game.html | Mature | Gathering | Trivia | Atomic Planet | 26.352668313589042
+2. family-guy.html | Mature | 2K Games | "Action |  Adventure" | 26.321567031596768
+3. driver-4-working-title.html | Mature | Atari | Action | Reflections Interactive | 9.782478076750333
+4. james-bond-007-goldeneye-2.html | Teen | Electronic Arts | Shooter | EA Los Angeles | 7.353652394406042
+5. narc.html | Mature | Midway Games | Action | Point of View | 3.5040547671018634
+6. nba-ballers.html | Everyone | Midway Games | "Sports |  Action" | 3.5040547671018634
+7. kelly-slaters-pro-surfer.html | Everyone | Activision | Sports | Treyarch | 3.5040547671018634
+8. evil-dead-regeneration.html | Mature | THQ | Action | Cranky Pants Games | 3.5040547671018634
+9. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 3.5040547671018634
+10. final-fight-streetwise.html | Mature | Capcom | "Fighting |  Action" | 3.5040547671018634
+Average tf-idf: 9.083469441895335
+
+----- The Guy Game -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. the-guy-game.html | Mature | Gathering | Trivia | Atomic Planet | 126.35266831358905
+2. family-guy.html | Mature | 2K Games | "Action |  Adventure" | 26.321567031596768
+3. driver-4-working-title.html | Mature | Atari | Action | Reflections Interactive | 9.782478076750333
+4. james-bond-007-goldeneye-2.html | Teen | Electronic Arts | Shooter | EA Los Angeles | 7.353652394406042
+5. narc.html | Mature | Midway Games | Action | Point of View | 3.5040547671018634
+6. nba-ballers.html | Everyone | Midway Games | "Sports |  Action" | 3.5040547671018634
+7. kelly-slaters-pro-surfer.html | Everyone | Activision | Sports | Treyarch | 3.5040547671018634
+8. evil-dead-regeneration.html | Mature | THQ | Action | Cranky Pants Games | 3.5040547671018634
+9. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 3.5040547671018634
+10. final-fight-streetwise.html | Mature | Capcom | "Fighting |  Action" | 3.5040547671018634
+Average tf-idf: 19.083469441895346
+
+----- Spyder-Man -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. spider-man-trilogy.html | Everyone 10+ | Activision | Action | Next Level Games | 36.412169427715696
+2. spider-man-3.html | Teen | Activision | "Action |  Adventure" | 36.32602814461253
+3. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 8.28008083840245
+Average tf-idf: 27.006092803576895
+
+----- RPG Games for PlayStation -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. dragon-warrior-viii.html | Teen | Square Enix | RPG | Level-5 | 7.8028157385193655
+2. wild-arms-another-code-f.html | Teen | XSEED Games | RPG | Media.Vision | 7.1108130611599965
+3. shadow-hearts-ii.html | Teen | Midway Games / Aruze | RPG | Nautilus | 7.0862174101867605
+4. wild-arms-3.html | Teen | Sony Computer Entertainment | RPG | Media.Vision | 6.97993519040433
+5. level-5-new-rpg-untitled.html | Teen | Sony Computer Entertainment | RPG | Level-5 | 6.715416816850833
+6. phantom-brave.html | Teen | NIS | "Strategy |  RPG" | 6.276852799404482
+7. final-fantasy-xii.html | Teen | Square Enix | RPG | Square Enix | 6.276852799404482
+8. project-melfes.html | Teen | Namco | RPG | Namco | 6.266367937349549
+9. hackinfection-part-1.html | Teen | Bandai | "Action |  RPG" | 6.135490066593883
+10. phantasy-star-universe.html | Teen | SEGA | RPG | Sonic Team | 5.74009382228472
+Average tf-idf: 6.639085564215838
+
+----- Spyder-Man -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 5.988961416889864
+Average tf-idf: 5.988961416889864
+
+----- Spyder-Man -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 5.988961416889864
+Average tf-idf: 5.988961416889864
+
+----- Spyder-Man -----
+RANKING | DOCNAME | RATING | PUBLISHER | GENRE | DEVELOPER
+1. spider-man-trilogy.html | Everyone 10+ | Activision | Action | Next Level Games | 36.412169427715696
+2. spider-man-3.html | Teen | Activision | "Action |  Adventure" | 36.32602814461253
+3. untitled-marvel-comics-rpg.html | Teen | Activision | "Action |  RPG" | 8.28008083840245
+Average tf-idf: 27.006092803576895
+
