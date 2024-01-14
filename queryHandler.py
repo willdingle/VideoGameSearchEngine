@@ -42,7 +42,7 @@ def processQuery(query, vocab, postings, docIDs, totalTerms, docInfo):
     lemmer = WordNetLemmatizer()
 
     queryRaw = query
-    #entityRecog(queryRaw.split(" ")) #Named Entity Recognition on the query terms
+    entityRecog(queryRaw.split(" ")) #Named Entity Recognition on the query terms
     query = query.lower()
     query = re.sub(r"[^A-Za-z0-9- ]+", "", query)
     # Splits search query into terms and gets doc IDs of docs containing each term
