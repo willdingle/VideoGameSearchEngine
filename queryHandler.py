@@ -18,19 +18,21 @@ def spellCheck(term):
     checker = SpellChecker()
     correctedTerm = checker.correction(term)
     
-    if "-" in term and term != correctedTerm: 
-        dashIndex = term.index("-")
-        correctedTerm = correctedTerm[0 : dashIndex] + "-" + correctedTerm[dashIndex : len(term)]
+    if correctedTerm:
+        if "-" in term and term != correctedTerm: 
+            dashIndex = term.index("-")
+            correctedTerm = correctedTerm[0 : dashIndex] + "-" + correctedTerm[dashIndex : len(term)]
 
-    if correctedTerm != term:
-        choice = "a"
-        while choice != "Y" and choice != "N":
-            choice = input("Instead of " + term + ", did you mean " + correctedTerm + "(Y/N)? ").upper()
-        if choice == "N":
-            return term
+        if correctedTerm != term:
+            choice = "a"
+            while choice != "Y" and choice != "N":
+                choice = input("Instead of " + term + ", did you mean " + correctedTerm + "(Y/N)? ").upper()
+            if choice == "N":
+                return term
 
-    if term != correctedTerm: print("Corrected term", term, "to", correctedTerm)
-    return correctedTerm
+        if term != correctedTerm: print("Corrected term", term, "to", correctedTerm)
+        return correctedTerm
+    return term
 
 def entityRecog(terms):
     speechTags = pos_tag(terms, tagset="universal")
